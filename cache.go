@@ -13,12 +13,15 @@ import (
 )
 
 var (
+	// 全局缓存表的Map, 支持多个缓存表
 	cache = make(map[string]*CacheTable)
+	// cache的锁
 	mutex sync.RWMutex
 )
 
 // Cache returns the existing cache table with given name or creates a new one
 // if the table does not exist yet.
+// 【创建缓存】
 func Cache(table string) *CacheTable {
 	mutex.RLock()
 	t, ok := cache[table]

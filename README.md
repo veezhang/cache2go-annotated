@@ -1,6 +1,8 @@
 cache2go
 ========
 
+源码分析文档见： [源码分析-cache2go](https://veezhang.github.io/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-cache2go/)
+
 Concurrency-safe golang caching library with expiration capabilities.
 
 ## Installation
